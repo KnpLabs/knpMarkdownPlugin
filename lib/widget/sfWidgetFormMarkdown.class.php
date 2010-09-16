@@ -79,7 +79,7 @@ JS;
     
     if ($this->getOption('fixe_admin_css'))
     {
-      $stylesheets[sfConfig::get('app_knp_markdown_web_dir') . '/' . 'markdown.css'] = 'all';
+      $stylesheets[sfConfig::get('app_knp_markdown_web_dir') . '/' . 'markitup.css'] = 'all';
     }
     
     return $stylesheets;
