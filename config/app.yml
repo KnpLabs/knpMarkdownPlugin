@@ -11,5 +11,3 @@ all:
 
     preview:        true
     preview_route:  knp_markdown_preview
-
-    web_dir:		/knpMarkdownPlugin
