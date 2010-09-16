@@ -35,6 +35,7 @@ class sfWidgetFormMarkdown extends sfWidgetFormTextarea
 
   public function configure($options = array(), $attributes = array())
   {
+  	$this->addOption( 'fixe_admin_css', true )
     $this->addOption( 'preview', sfConfig::get( 'app_knp_markdown_preview' ) );
     $this->addOption( 'preview_route', sfConfig::get( 'app_knp_markdown_preview_route' ) );
     $this->addOption( 'markitup_dir', sfConfig::get( 'app_knp_markdown_markitup_dir' ) );
@@ -53,7 +54,7 @@ class sfWidgetFormMarkdown extends sfWidgetFormTextarea
 //<![CDATA[
 $(document).ready(function() {
   mySettings.previewParserPath = "$previewUrl";
-  $("#$id").css({width: '690px'}).markItUp(mySettings);
+  $("#$id").markItUp(mySettings);
 });
 //]]>
 JS;
@@ -71,10 +72,15 @@ JS;
    */
   public function getStylesheets()
   {
-    return array(
+    $stylesheets = array(
       $this->getOption( 'markitup_dir' ) . '/skins/' . $this->getOption( 'markitup_skin' ) . '/style.css' => 'all',
       $this->getOption( 'markitup_dir' ) . '/sets/' . $this->getOption( 'markitup_set' ) . '/style.css' => 'all'
     );
+    
+    if ($this->getOption('fixe_admin_css'))
+    {
+      array_unshift( $stylesheets, array( sfConfig::get('app_knp_markdown_web_dir') . '/' . 'markdown.css' => 'all' ) );
+    }
   }
 
   /**
