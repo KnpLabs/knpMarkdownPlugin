@@ -81,6 +81,8 @@ JS;
     {
       array_unshift( $stylesheets, array( sfConfig::get('app_knp_markdown_web_dir') . '/' . 'markdown.css' => 'all' ) );
     }
+    
+    return $stylesheets;
   }
 
   /**
