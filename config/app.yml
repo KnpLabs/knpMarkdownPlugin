@@ -1,0 +1,13 @@
+all:
+
+  knp_markdown:
+
+    jquery_use:     true
+    jquery_src:     /knpMarkdownPlugin/jquery-1.4.2.min.js
+
+    markitup_dir:   /knpMarkdownPlugin/markitup
+    markitup_set:   markdown
+    markitup_skin:  simple
+
+    preview:        true
+    preview_route:  knp_markdown_preview
