@@ -21,7 +21,7 @@ Publish the plugin assets:
 
     $ symfony plugin:publish-assets
 
-Enable the knpMarkdown module in your `apps/myApp/config/settings.yml':
+Enable the knpMarkdown module in your `apps/myApp/config/settings.yml`:
 
     all:
 
@@ -35,4 +35,3 @@ Clear your cache:
 
     $ symfony cc
 
-## Usage
