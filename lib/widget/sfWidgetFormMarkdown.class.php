@@ -35,7 +35,7 @@ class sfWidgetFormMarkdown extends sfWidgetFormTextarea
 
   public function configure($options = array(), $attributes = array())
   {
-  	$this->addOption( 'fixe_admin_css', true )
+  	$this->addOption( 'fixe_admin_css', true );
     $this->addOption( 'preview', sfConfig::get( 'app_knp_markdown_preview' ) );
     $this->addOption( 'preview_route', sfConfig::get( 'app_knp_markdown_preview_route' ) );
     $this->addOption( 'markitup_dir', sfConfig::get( 'app_knp_markdown_markitup_dir' ) );
