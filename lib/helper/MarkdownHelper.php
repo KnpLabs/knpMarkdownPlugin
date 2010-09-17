@@ -10,5 +10,5 @@ function markdown2html($markdown)
 {
   $parser = new sfMarkdownParser();
   
-  return $parser->transform( $text );
+  return $parser->transform( $markdown );
 }
